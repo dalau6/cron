@@ -1,0 +1,9 @@
+version: "3"
+services:
+  web:
+    build: tutorial
+    # command: bash -c "scrapy crawl quotes && python3 --version"
+    # command: bash -c 'echo -e ...'
+    entrypoint: /bin/bash -c "chmod 775 /code/crontab.sh && /code/crontab.sh"
+    volumes:
+      - ./tutorial:/code
